@@ -1,0 +1,90 @@
+/*--------------------------------
+member
+--------------------------------*/
+.member {
+  padding-top: (200/$pc)*100vw;
+  padding-bottom: (200/$pc)*100vw;
+  background-color: rgba(42, 132, 172, .38);
+  @include sp {
+    padding-top: (100/$sp)*100vw;
+    padding-bottom: (100/$sp)*100vw;
+  }
+  .section-title {
+    margin-bottom: (20/$pc)*100vw;
+  }
+  .section-sub-title {
+    margin-bottom: (20/$pc)*100vw;
+    font-size: 2rem;
+    color: $color-light-yellow;
+    @include sp {
+      margin-bottom: (30/$sp)*100vw;
+      font-size: (14/$sp)*100vw;
+    }
+  }
+  &-media {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include sp {
+      display: block;
+    }
+    &__img {
+      width: (502/$pc)*100vw;
+      @include sp {
+        margin-bottom: 30px;
+        width: auto;
+      }
+    }
+    &__body {
+      width: (422/$pc)*100vw;
+      color: $color-white;
+      @include sp {
+        width: auto;
+      }
+    }
+    &__term {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      @include sp {
+        font-size: 14px;
+      }
+    }
+    &__name {
+      margin-bottom: 20px;
+      font-size: 3rem;
+      @include sp {
+        font-size: 30px;
+      }
+      &--sub {
+        font-size: 1.8rem;
+        @include sp {
+          font-size: 16px;
+        }
+      }
+    }
+    &__text {
+      margin-bottom: 30px;
+      font-size: 1.4rem;
+      line-height: (34/14);
+      @include sp {
+        font-size: 12px;
+        line-height: (22/12);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .section-aid-text {
+      position: absolute;
+      top: 400px;
+      left: (20/$pc)*100vw;
+      color: $color-white;
+      @include sp {
+        display: none;
+      }
+      &::before {
+        background-color: $color-white;
+      }
+    }
+  }
+}

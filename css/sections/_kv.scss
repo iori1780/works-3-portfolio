@@ -1,0 +1,151 @@
+/*--------------------------------
+kv
+--------------------------------*/
+.kv {
+  position: relative;
+  padding-bottom: (200/$pc)*100vw;
+  overflow: hidden;
+  z-index: 0;
+  @include sp {
+    padding-bottom: (300/$sp)*100vw;
+  }
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: (540/$pc)*100vw;
+    background-color: rgba(42, 132, 172, .38);
+    z-index: -1;
+    @include sp {
+      height: (300/$sp)*100vw;
+    }
+  }
+  &-contents {
+    padding-top: (440/$pc)*100vw;
+    padding-left: (138/$pc)*100vw;
+    @include sp {
+      padding-top: 0;
+      padding-left: (22.5/$sp)*100vw;
+    }
+    &__text {
+      margin-bottom: 42px;
+      padding-left: (80/$pc)*100vw;
+      font-size: (100/$pc)*100vw;
+      color: $color-white;
+      -webkit-text-stroke: 1px $color-black;
+      line-height: (105/100);
+      @include sp {
+        padding-left: 0;
+        font-size: (36/$sp)*100vw;
+        font-weight: bold;
+        color: $color-mid-black;
+        -webkit-text-stroke: initial;
+        line-height: (56/36);
+      }
+      &--bottom {
+        color: $color-mid-black;
+        @include sp {
+          color: $color-white;
+          font-weight: normal;
+          -webkit-text-stroke: 1px $color-black;
+        }
+      }
+    }
+    &__subtitle {
+      padding-left: (80/$pc)*100vw;
+      font-size: (42/$pc)*100vw;
+      color: transparent;
+      -webkit-text-stroke: 1px $color-black;
+      @include sp {
+        display: none;
+      }
+    }
+  }
+  &__img {
+    width: (1142/$pc)*100vw;
+    height: (352/$pc)*100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    @include sp {
+      display: none;
+    }
+  }
+  &__img-sp {
+    display: none;
+    @include sp {
+      display: block;
+      width: (352/$sp)*100vw;
+      position: absolute;
+      top: (110/$sp)*100vw;
+      z-index: -1;
+    }
+  }
+  &__copyright {
+    position: absolute;
+    transform: rotate(-90deg) translateX(-50%);
+    top: (160/$pc)*100vw;
+    right: -(20/$pc)*100vw;
+    font-size: 1.2rem;
+    @include sp {
+      top: (160/$sp)*100vw;
+      right: -(30/$sp)*100vw;
+      font-family: $oswald;
+      font-size: 9px;
+    }
+    &--pc {
+      @include sp {
+        display: none;
+      }
+    }
+    &--sp {
+      display: none;
+      @include sp {
+        display: block;
+      }
+    }
+  }
+  .scroll-arrow-wrapper {
+    position: absolute;
+    top: (660/$pc)*100vw;
+    left: (70/$pc)*100vw;
+    transform: rotate(90deg);
+    @include sp {
+      top: (530/$sp)*100vw;
+      left: (10/$sp)*100vw;
+    }
+    .scroll-arrow {
+      &::before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 1px;
+        background-color: $color-black;
+        position: absolute;
+        top: 20%;
+        left: -100px;
+        transform: translateY(-50%);
+        @include sp {
+          width: 55px;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -4px;
+        left: -20px;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 10px solid $color-black;
+        @include sp {
+          left: -50px;
+        }
+      }
+    }
+  }
+}
+
+

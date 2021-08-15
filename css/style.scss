@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+//リセットcssの読み込み
+@import "reset";
+//変数、レスポンシブ等の読み込み
+@import "config";
+//html、body等の基本設定の読み込み
+@import "base";
+
+//各セクションの読み込み
+@import "sections/header";
+@import "sections/kv";
+@import "sections/point";
+@import "sections/service";
+@import "sections/flow";
+@import "sections/member";
+@import "sections/faq";
+@import "sections/contact";
+@import "sections/company";
+@import "sections/footer";

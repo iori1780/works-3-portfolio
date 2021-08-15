@@ -1,0 +1,182 @@
+/*--------------------------------
+service
+--------------------------------*/
+.service {
+  padding-bottom: (100/$pc)*100vw;
+  @include sp {
+    padding-bottom: (130/$sp)*100vw;
+  }
+  .section-title {
+    margin-bottom: (100/$pc)*100vw;
+  }
+  .section-title {
+    @include sp {
+      text-align: center;
+    }
+  }
+  &-professional {
+    &-layout {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: (80/$pc)*100vw;
+      padding-right: (138/$pc)*100vw;
+      @include sp {
+        display: block;
+        margin-bottom: (50/$sp)*100vw;
+        padding-right: 0;
+      }
+    }
+    &__img {
+      width: (669/$pc)*100vw;
+      height: (446/$pc)*100vw;
+      @include sp {
+        width: auto;
+        height: (252/$sp)*100vw;
+        margin-bottom: (30/$sp)*100vw;
+      }
+    }
+    &__body {
+      width: (572/$pc)*100vw;
+      margin-left: -(70/$pc)*100vw;
+      @include sp {
+        margin-left: 0;
+        padding: 0 (22.5/$sp)*100vw;
+        width: auto;
+      }
+    }
+    &__term {
+      margin-bottom: 40px;
+      font-size: 3.8rem;
+      @include sp {
+        font-size: 24px;
+      }
+    }
+    &__desc {
+      line-height: (35/18);
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    margin-bottom: (200/$pc)*100vw;
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: (100/$sp)*100vw;
+    }
+    &__term {
+      margin-bottom: 10px;
+      font-family: $yugothic;
+      text-align: center;
+      font-size: (21/$pc)*100vw;
+      @include sp {
+        font-size: (20/$sp)*100vw;
+      }
+    }
+    &__img {
+      margin: 0 auto 20px;
+      width: (70/$pc)*100vw;
+      height: (70/$pc)*100vw;
+      @include sp {
+        width: (60/$sp)*100vw;
+        height: (60/$sp)*100vw;
+      }
+    }
+    &__desc {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      font-size: 1.2rem;
+      display: flex;
+      @include sp {
+        display: none;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__icon {
+      position: relative;
+      margin-bottom: 5px;
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../../images/triangle.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 40%;
+        left: -14px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../../images/triangle-bg.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 40%;
+        left: -12px;
+        z-index: -1;
+      }
+    }
+  }
+  &-percent {
+    &-layout {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: (50/$pc)*100vw;
+      padding: 0 (138/$pc)*100vw;
+      @include sp {
+        display: block;
+        padding: 0;
+      }
+    }
+    &__img {
+      width: (546/$pc)*100vw;
+      height: (365/$pc)*100vw;
+      @include sp {
+        width: auto;
+        height: (250/$sp)*100vw;
+      }
+    }
+    &__body {
+      width: (654/$pc)*100vw;
+      margin-right: -(210/$pc)*100vw;
+      @include sp {
+        margin-top: -(30/$sp)*100vw;
+        margin-right: 0;
+        padding: 0 (22.5/$sp)*100vw;
+      }
+    }
+    &__text {
+      font-size: (250/$pc)*100vw;
+      color: transparent;
+      -webkit-text-stroke: 1px $color-mid-yellow;
+    }
+  }
+  &-sales {
+    padding-right: (400/$pc)*100vw;
+    @include sp {
+      padding-right: (22.5/$sp)*100vw;
+    }
+    &__term {
+      margin-bottom: 20px;
+      font-family: $yugothic;
+      font-size: 3.8rem;
+      line-height: (50/38);
+      @include sp {
+        font-size: 24px;
+        line-height: (38/24);
+      }
+    }
+    &__desc {
+      font-family: $yugothic;
+      font-size: 1.8rem;
+      line-height: (35/18)  ;
+    }
+  }
+}

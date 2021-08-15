@@ -1,0 +1,64 @@
+/*--------------------------------
+footer
+--------------------------------*/
+.footer {
+  position: relative;
+  height: (600/$pc)*100vw;
+  background-color: $color-mid-black;
+  @include sp {
+    height: (375/$sp)*100vw;
+  }
+  .scroll-top {
+    position: absolute;
+    top: (100/$pc)*100vw;
+    left: (40/$pc)*100vw;
+    font-size: 1.6rem;
+    color: $color-white;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    user-select: none;
+    cursor: pointer;
+    @include sp {
+      top: (60/$sp)*100vw;
+      left: -(10/$sp)*100vw;
+      font-size: 12px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 1px;
+      background-color: $color-white;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 25%;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 10px solid $color-white;
+    }
+  }
+  &__copyright {
+    position: absolute;
+    right: (30/$pc)*100vw;
+    bottom: (40/$pc)*100vw;
+    color: $color-white;
+    @include sp {
+      font-size: 12px;
+    }
+    &--lead {
+      @include sp {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

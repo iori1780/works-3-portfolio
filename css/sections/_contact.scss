@@ -1,0 +1,74 @@
+/*--------------------------------
+contact
+--------------------------------*/
+.contact {
+  padding-top: (200/$pc)*100vw;
+  padding-bottom: (200/$pc)*100vw;
+  background-color: $color-blue;
+  @include sp {
+    padding-bottom: (100/$sp)*100vw;
+  }
+  .section-title {
+    margin-bottom: (20/$pc)*100vw;
+  }
+  .section-sub-title {
+    margin-bottom: (40/$pc)*100vw;
+    font-size: 2rem;
+    color: $color-light-yellow;
+    @include sp {
+      margin-bottom: (40/$sp)*100vw;
+      font-size: 14px;
+    }
+  }
+  .form {
+    &__block--input {
+      width: (668/$pc)*100vw;
+      margin-bottom: 20px;
+      @include sp {
+        width: auto;
+      }
+    }
+    &__input {
+      width: 100%;
+      padding: 20px;
+      font-family: $ibm;
+      font-size: 1.8rem;
+      background-color: $color-white;
+      @include sp {
+        font-size: 16px;
+      }
+    }
+    &__block--textarea {
+      width: (1004/$pc)*100vw;
+      margin-bottom: 30px;
+      @include sp {
+        width: auto;
+      }
+    }
+    &__textarea {
+      width: 100%;
+      height: 300px;
+      padding: 20px;
+      font-family: $ibm;
+      background-color: $color-white;
+      resize: none;
+      @include sp {
+        height: 250px;
+      }
+    }
+    &__submit {
+      width: 100%;
+      padding: 30px;
+      font-family: $ibm;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      background-color: $color-yellow;
+      border-radius: 80px;
+      @include sp {
+        padding: 20px;
+        font-size: 21px;
+      }
+    }
+  }
+}

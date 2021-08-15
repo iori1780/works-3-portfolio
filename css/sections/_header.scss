@@ -1,0 +1,84 @@
+/*--------------------------------
+header
+--------------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 52.5px;
+  padding-right: (34.5/$pc)*100vw;
+  padding-bottom: 35px;
+  padding-left: (48.5/$pc)*100vw;
+  @include sp {
+    padding-top: (34/$sp)*100vw;
+    padding-right: (22.5/$sp)*100vw;
+    padding-left: (22.5/$sp)*100vw;
+  }
+  &-title {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    @include sp {
+      font-size: (14/$sp)*100vw;
+    }
+  }
+  &-nav {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 30;
+    @include sp {
+      width: 40px;
+      height: 40px;
+    }
+    &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      @include sp {
+        font-size: 12px;
+      }
+      &.on {
+        color: $color-white;
+      }
+    }
+    &__border {
+      width: 60px;
+      height: 1px;
+      background-color: $color-gray;
+      transition: .3s;
+      @include sp {
+        width: 40px;
+      }
+    }
+    .border-top {
+      position: absolute;
+      top: 30px;
+      @include sp {
+        top: 20px;
+      }
+    }
+    .on.border-top {
+      top: 39px;
+      transform: rotate(20deg);
+      transition: .3s;
+      @include sp {
+        top: 26px;
+      }
+    }
+    .border-bottom {
+      position: absolute;
+      top: 50px;
+      @include sp {
+        top: 33px;
+      }
+    }
+    .on.border-bottom {
+      top: 39px;
+      transform: rotate(-20deg);
+      transition: .3s;
+      @include sp {
+        top: 27px;
+      }
+    }
+  }
+}

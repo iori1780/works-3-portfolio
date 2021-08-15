@@ -1,0 +1,58 @@
+/*--------------------------------
+company
+--------------------------------*/
+.company {
+  padding-top: (100/$pc)*100vw;
+  padding-bottom: (200/$pc)*100vw;
+  padding-left: (138/$pc)*100vw;
+  background-color: $color-blue;
+  .section-title {
+    margin-bottom: (30/$pc)*100vw;
+    @include sp {
+      margin-bottom: (30/$sp)*100vw;
+    }
+  }
+  &__table {
+    display: block;
+    padding: (100/$pc)*100vw (123/$pc)*100vw;
+    background-color: $color-white;
+    @include sp {
+      padding: (20/$sp)*100vw (20/$sp)*100vw;
+    }
+  }
+  &__tr {
+    display: flex;
+    &:last-child .company__th {
+      border-bottom: none;
+    }
+    &:last-child .company__td {
+      border-bottom: none;
+    }
+  }
+  &__th {
+    display: block;
+    width: (170/$pc)*100vw;
+    margin-right: 20px;
+    padding: 20px 0;
+    text-align: right;
+    font-size: 2.1rem;
+    font-weight: bold;
+    line-height: (40/21);
+    border-bottom: 1px solid $color-gray-4;
+    @include sp {
+      width: (60/$sp)*100vw;
+      font-size: 16px;
+    }
+  }
+  &__td {
+    width: (700/$pc)*100vw;
+    padding: 20px 0;
+    font-size: 2.1rem;
+    font-weight: bold;
+    line-height: (40/21);
+    border-bottom: 1px solid $color-gray-4;
+    @include sp {
+      font-size: 16px;
+    }
+  }
+}

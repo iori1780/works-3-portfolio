@@ -1,0 +1,134 @@
+/*--------------------------------
+flow
+--------------------------------*/
+.flow {
+  position: relative;
+  &-title-wrapper {
+    padding-top: (70/$pc)*100vw;
+    padding-bottom: (10/$pc)*100vw;
+    padding-left: (138/$pc)*100vw;
+    width: (473/$pc)*100vw;
+    background-color: $color-blue;
+    @include sp {
+      padding-top: (100/$sp)*100vw;
+      padding-left: (22.5/$sp)*100vw;
+      width: auto;
+    }
+  }
+  .section-title {
+    margin-bottom: (10/$pc)*100vw;
+  }
+  .section-sub-title {
+    font-size: (20/$pc)*100vw;
+    color: $color-mid-yellow;
+    @include sp {
+      font-size: 14px;
+    }
+  }
+  &-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: (138/$pc)*100vw;
+    padding-top: (100/$pc)*100vw;
+    position: relative;
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: (22.5/$sp)*100vw;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      width: 100%;
+      height: (270/$pc)*100vw;
+      background-color: $color-blue;
+      z-index: -1;
+      @include sp {
+        height: (380/$sp)*100vw;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: (270/$pc)*100vw;
+      width: 100%;
+      height: (180/$pc)*100vw;
+      background-color: $color-blue;
+      opacity: .38;
+      z-index: -1;
+      @include sp {
+        top: (380/$sp)*100vw;
+        height: (78/$sp)*100vw;
+      }
+    }
+    &__item {
+      height: (350/$pc)*100vw;
+      position: relative;
+      @include sp {
+        height: (214/$sp)*100vw;
+      }
+      &:nth-child(1) {
+        background-color: $color-white;
+      }
+      &:nth-child(2) {
+        background-color: $color-gray-1;
+      }
+      &:nth-child(3) {
+        background-color: $color-gray-2;
+      }
+      &:nth-child(4) {
+        background-color: $color-gray-3;
+      }
+    }
+    &__title {
+      font-family: $oswald;
+      font-size: (80/$pc)*100vw;
+      color: transparent;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px $color-black;
+      opacity: .38;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include sp {
+        font-size: (59/$sp)*100vw;
+        opacity: .2;
+      }
+    }
+    &__number {
+      font-size: (180/$pc)*100vw;
+      line-height: 0.7;
+      @include sp {
+        font-size: (133/$sp)*100vw;
+      }
+    }
+    &__text {
+      font-size: (38/$pc)*100vw;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      @include sp {
+        font-size: (21/$sp)*100vw;
+      }
+      &--sub {
+        font-size: (14/$sp)*100vw;
+      }
+    }
+    .section-aid-text {
+      position: absolute;
+      top: 100px;
+      left:(30/$pc)*100vw;
+      @include sp {
+        display: none;
+      }
+    }
+  }
+}

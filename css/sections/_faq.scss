@@ -1,0 +1,81 @@
+/*--------------------------------
+faq
+--------------------------------*/
+.faq {
+  padding-top: (200/$pc)*100vw;
+  padding-bottom: (200/$pc)*100vw;
+  .section-title {
+    margin-bottom: (20/$pc)*100vw;
+  }
+  .section-sub-title {
+    margin-bottom: (30/$pc)*100vw;
+    font-size: 2rem;
+    @include sp {
+      font-size: 14px;
+    }
+  }
+  .accordion {
+    &__list {
+      padding-left: 10px;
+      border-bottom: 1px solid $color-dark-black;
+      cursor: pointer;
+      &:nth-child(even) {
+        background-color: $color-mid-gray;
+      }
+    }
+    &__term {
+      display: flex;
+      align-items: center;
+      padding: 30px 60px 30px 0;
+      font-size: 1.8rem;
+      color: $color-gray;
+      line-height: (24/18);
+      position: relative;
+      @include sp {
+        padding-right: 40px;
+      }
+      &::before, &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: $color-mid-black;
+        position: absolute;
+        top: 50%;
+        right: (25/$pc)*100vw;
+        transform: translateY(-50%);
+      }
+      &::after {
+        transform: translateY(-50%) rotate(90deg);
+        transition: .3s;
+      }
+      &.on::after {
+        transform: translateY(-50%) rotate(0);
+      }
+      &-icon {
+        margin-right: 10px;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+      }
+    }
+    &__answers {
+      display: none;
+      margin-bottom: 30px;
+    }
+    &__desc {
+      display: flex;
+      align-items: center;
+      padding-right: 60px;
+      font-size: 1.8rem;
+      line-height: (24/18);
+      @include sp {
+        padding-right: 40px;
+      }
+      &-icon {
+        margin-right: 10px;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
